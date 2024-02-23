@@ -1,0 +1,42 @@
+{
+    "name": "styleup/laravel-logger",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rasoul Danesh",
+            "email": "rasouldanesh90@gmail.com",
+            "homepage": "http://stylup.ir"
+        }
+    ],
+    "homepage": "https://github.com/styleup/laravel-logger",
+    "keywords": ["Laravel", "LaravelLogger"],
+    "require": {
+        "illuminate/support": "~9",
+        "jenssegers/mongodb": "^3.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Styleup\\LaravelLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Styleup\\LaravelLogger\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Styleup\\LaravelLogger\\LaravelLoggerServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLogger": "Styleup\\LaravelLogger\\Facades\\LaravelLogger"
+            }
+        }
+    }
+}
